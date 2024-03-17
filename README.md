@@ -1,3 +1,5 @@
+* Tutorial chapters 5 thru 7 (post-intermission)
+
 # Redwood Tutorial App
 
 This repo represents the final state of the app created during the [Redwood Tutorial](https://redwoodjs.com/tutorial).
