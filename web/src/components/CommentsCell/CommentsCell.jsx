@@ -6,13 +6,11 @@ export const QUERY = gql`
       id
       name
       body
+      postId
       createdAt
     }
   }
 `
-
-// ^^ Unknown argument "postId" on field
-//    "Query.comments".GraphQL: Validation
 
 export const Loading = () => {
   return <div className="text-center text-gray-500">Loading . . .</div>
