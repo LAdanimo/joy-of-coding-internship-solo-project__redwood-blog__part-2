@@ -11,9 +11,17 @@ export const QUERY = gql`
   }
 `
 
-export const Loading = () => <div>Loading...</div>
+export const Loading = () => {
+  return <div className="text-center text-gray-500">Loading . . .</div>
+}
 
-export const Empty = () => <div>Empty</div>
+export const Empty = () => {
+  return (
+    <div className="text-center text-gray-500">
+      There are no posts yet. Check back soon!
+    </div>
+  )
+}
 
 export const Failure = ({ error }) => <div>Error: {error.message}</div>
 

@@ -1,8 +1,8 @@
 import Comment from 'src/components/Comment'
 
 export const QUERY = gql`
-  query CommentsQuery {
-    comments {
+  query CommentsQuery($postId: Int!) {
+    comments(postId: $postId) {
       id
       name
       body
@@ -11,7 +11,12 @@ export const QUERY = gql`
   }
 `
 
-export const Loading = () => <div>Loading...</div>
+// ^^ Unknown argument "postId" on field
+//    "Query.comments".GraphQL: Validation
+
+export const Loading = () => {
+  return <div className="text-center text-gray-500">Loading . . .</div>
+}
 
 export const Empty = () => {
   return (
