@@ -7,13 +7,35 @@ export const QUERY = gql`
       title
       body
       createdAt
+      user {
+        name
+      }
     }
   }
 `
 
-export const Loading = () => <div>Loading...</div>
+export const Loading = () => {
+  return <div className="text-center text-gray-500">Loading . . .</div>
+}
 
-export const Empty = () => <div>Empty</div>
+export const Empty = () => {
+  return (
+    <div className="text-center text-gray-500">
+      <p>
+        This post doesn't exist yet&nbsp;
+        <em>
+          <strong>!?</strong>
+        </em>
+      </p>
+      <p>
+        How did you get here&nbsp;
+        <em>
+          <strong>?!</strong>
+        </em>
+      </p>
+    </div>
+  )
+}
 
 export const Failure = ({ error }) => <div>Error: {error.message}</div>
 
